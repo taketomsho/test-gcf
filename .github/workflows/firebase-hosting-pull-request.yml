@@ -39,10 +39,13 @@ jobs:
         with:
           version: '>= 363.0.0'
 
+      - name: 'Add invoker'
+        run: 'gcloud functions add-invoker-policy-binding hellofunction-${{ github.event.pull_request.number }} --region=asia-northeast1 --project=tracky-333210 --member=allUsers'
+
       # Example of using the output
-      - name: Add comment
-        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            "${{ steps.deploy.outputs.url }}" This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
+      # - name: Add comment
+      #   uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+      #   with:
+      #     issue-number: ${{ github.event.pull_request.number }}
+      #     body: |
+      #       Visit the preview URL for this PR : "${{ steps.deploy.outputs.url }}" This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
