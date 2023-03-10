@@ -36,8 +36,6 @@ jobs:
 
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v1'
-        with:
-          version: '>= 363.0.0'
 
       - name: 'Add invoker'
         run: 'gcloud functions add-invoker-policy-binding hellofunction-${{ github.event.pull_request.number }} --region=asia-northeast1 --project=tracky-333210 --member=allUsers'
