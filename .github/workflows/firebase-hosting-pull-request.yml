@@ -23,12 +23,12 @@ jobs:
       - id: 'deploy'
         uses: 'google-github-actions/deploy-cloud-functions@v1'
         with:
-          name: '${{ github.event.pull_request.number }}-function'
+          name: 'hellofunction-${{ github.event.pull_request.number }}'
           runtime: 'python310'
           entry_point: hello_http
           memory_mb: 512
           region: asia-northeast1
-          labels: 'PR=${{ github.event.pull_request.number }}'
+          labels: 'PR=NO${{ github.event.pull_request.number }}'
           source_dir: functions
           project_id: tracky-333210
 
