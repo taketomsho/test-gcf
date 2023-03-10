@@ -37,7 +37,7 @@ jobs:
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v1'
 
-      - name: 'Add invoker'
+      - name: 'Add invoker '
         run: 'gcloud functions add-iam-policy-binding hellofunction-1 --member=allUsers --role=roles/cloudfunctions.invoker --region=asia-northeast1 --project=tracky-333210'
 
       # Example of using the output
