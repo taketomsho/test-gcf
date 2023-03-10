@@ -33,6 +33,6 @@ jobs:
           source_dir: functions
           project_id: tracky-333210
 
-        # Example of using the output
-        - id: 'test'
-          run: 'curl "${{ steps.deploy.outputs.url }}"'
+      # Example of using the output
+      - id: 'test'
+        run: 'curl "${{ steps.deploy.outputs.url }}"'
