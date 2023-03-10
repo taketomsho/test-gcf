@@ -28,7 +28,8 @@ jobs:
           entry_point: hello_http
           memory_mb: 512
           region: asia-northeast1
-          labels: 'PR=NO${{ github.event.pull_request.number }}'
+          labels:
+            prno=no${{ github.event.pull_request.number }}
           source_dir: functions
           project_id: tracky-333210
 
