@@ -33,4 +33,4 @@ jobs:
           source_dir: functions
           project_id: tracky-333210
 
-          #  NUXT_PUBLIC_API_BASE: '${{ steps.deploy.outputs.url }}'
+          # NUXT_PUBLIC_API_BASE: '${{ steps.deploy.outputs.url }}'
