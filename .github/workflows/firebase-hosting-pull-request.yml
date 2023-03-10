@@ -40,6 +40,8 @@ jobs:
       - name: 'Add invoker'
         run: 'gcloud functions add-invoker-policy-binding hellofunction-${{ github.event.pull_request.number }} --region=asia-northeast1 --project=tracky-333210 --member=allUsers'
 
+      - name: 'Check diag'
+        run: 'gcloud info --run-diagnostics'
       # Example of using the output
       # - name: Add comment
       #   uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
